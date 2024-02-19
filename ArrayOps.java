@@ -4,15 +4,17 @@ public class ArrayOps {
     }
     
     public static int findMissingInt (int [] array) {
-        boolean flag =false;
-        int a =0;
-        for (int i=0; i<= (array.length);i++){
-            for (int j=0; j<= (array.length);j++){
-                if( array[j]==i){flag=true;}
-                } 
-                if(!flag){ a += i ;}
+        
+        int n = array.length;
+        int expected =n*(n+1)/2 ;
+        int actual =0;
+
+       
+        for (int i=0; i< (array.length);i++){
+             actual += array[i];
             }
-            return a;
+            int end =(expected-actual);
+            return end;
         }
   
 
