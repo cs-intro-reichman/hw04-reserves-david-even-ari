@@ -28,13 +28,14 @@ public class ArrayOps {
                     i--;
                 }
         }
+        
         int max2 =MaxValue(narray);
         return max2;
     }
     public static int MaxValue(int [] array) {
         int max =array[0] ;
         for (int i = 1 ; i< array.length ; i++){
-            if (max< array[i]){
+            if (max<= array[i]){
                 max=array[i];
             }
 
