@@ -22,14 +22,15 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-    String test = args[0];
+    String test = "";//args[0];
     System.err.println(capVowelsLowRest(test));   
-    String test2 = args[1];
+    String test2 = "hello World";//args[1];
     System.err.println(camelCase(test2));  
-    String test3 = args[2];
-    String test33 = args[3];
-    char test4 = (char)(test33.indexOf(0));
-    System.err.println(allIndexOf(test3,test4)); 
+   ;  
+    //String test3 = args[2];
+   // String test33 = args[3];
+    //char test4 = (char)(test33.indexOf(0));
+    //System.err.println(allIndexOf(test3,test4)); 
    
     }
       
@@ -98,9 +99,16 @@ public class StringOps {
         }
 
     }
-    char firstChar =(char)(answerfin.charAt(0)+32);
-     String answerfin1= firstChar + answerfin.substring(1);
-    return answerfin1;
+   
+    char firstChar =(char)(answerfin.charAt(0));
+    if (firstChar >64 && firstChar <91 ){
+        firstChar +=32 ;
+     answerfin= firstChar + answerfin.substring(1);
+    }else{
+        answerfin= answerfin ;
+    }
+
+    return answerfin;
 }
 
 
