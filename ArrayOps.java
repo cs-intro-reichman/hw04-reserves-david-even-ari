@@ -4,9 +4,17 @@ public class ArrayOps {
     }
     
     public static int findMissingInt (int [] array) {
-        // Write your code here:
-        return -1;
-    }
+        boolean flag =false;
+        int a =0;
+        for (int i=0; i<= (array.length);i++){
+            for (int j=0; j<= (array.length);j++){
+                if( array[j]==i){flag=true;}
+                } 
+                if(!flag){ a += i ;}
+            }
+            return a;
+        }
+  
 
     public static int secondMaxValue(int [] array) {
         // Write your code here:
