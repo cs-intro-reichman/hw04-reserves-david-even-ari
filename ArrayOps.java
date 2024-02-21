@@ -44,13 +44,33 @@ public class ArrayOps {
     }
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
-        // Write your code here:
-        return false;
+        boolean flag = true ;
+        int i =0;
+        
+        while ( flag && i< array1.length) {
+           if(containsintElements(array1[i],array2))
+           i++;
+           else{
+            flag=false;
+           }
+        }
+        return flag;
     }
 
     public static boolean isSorted(int [] array) {
         // Write your code here:
         return false;
     }
+    
+    public static boolean containsintElements(int int1,int [] array2){
+        boolean flag = false ;
+        for (int i = 0 ; i< array2.length ; i++){
+            int  intfromarray = array2[i];
+            if (intfromarray==int1){
+                flag=true;
+            }
 
+        }
+          return flag;
+    }
 }
