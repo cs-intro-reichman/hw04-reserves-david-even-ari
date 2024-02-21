@@ -58,8 +58,8 @@ public class ArrayOps {
     }
 
     public static boolean isSorted(int [] array) {
-        // Write your code here:
-        return false;
+        boolean isSort = (isSorteddown(array) && isSortedup(array));
+        return isSort;
     }
     
     public static boolean containsintElements(int int1,int [] array2){
@@ -72,5 +72,31 @@ public class ArrayOps {
 
         }
           return flag;
+    }
+
+
+    public static boolean isSortedup(int [] array) {
+        boolean flag =true;
+        int min =array[0];
+        for(int i= 1; i< array.length ; i++){
+            if(min<array[i]){
+                min=array[i];
+            }else{flag=false;}
+
+        }
+
+        return flag;
+    }
+    public static boolean isSorteddown(int [] array) {
+        boolean flag =true;
+        int max =array[0];
+        for(int i= 1; i< array.length ; i++){
+            if(max>array[i]){
+                max=array[i];
+            }else{flag=false;}
+
+        }
+
+        return flag;
     }
 }
