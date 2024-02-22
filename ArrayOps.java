@@ -58,7 +58,7 @@ public class ArrayOps {
     }
 
     public static boolean isSorted(int [] array) {
-        boolean isSort = (isSorteddown(array) && isSortedup(array));
+        boolean isSort = (isSorteddown(array) || isSortedup(array));
         return isSort;
     }
     
